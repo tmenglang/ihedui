@@ -80,5 +80,10 @@ export default {
   //用户权益
   userProbation(data){
     return instance.post(url + '/user/probation', data);
+  },
+
+  //黑白名单
+  blackWhiteList(data){
+    return instance.post(url + '/user/blackwhitelist', data);
   }
 }

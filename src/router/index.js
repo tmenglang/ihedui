@@ -5,6 +5,7 @@ import Worker from '@/views/Worker.vue'
 import About from '@/views/About.vue'
 import Support from '@/views/Support.vue'
 import Buy from '@/views/Buy.vue'
+import Set from '@/views/Set.vue'
 import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
 import Home from '@/views/Home.vue'
@@ -19,6 +20,7 @@ const router = new Router({
       {path: '/about', name:'about', component: About},
       {path: '/support', name:'support', component: Support},
       {path: '/buy', name:'buy', component: Buy},
+      {path: '/set', name:'set', component: Set},
       {path: '/login', name:'login', component: Login},
       {path: '/register', name:'register', component: Register},
       {path: '*', name: 'Notfind', component: NotFind},

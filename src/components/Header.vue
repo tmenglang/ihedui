@@ -17,6 +17,7 @@
                 </span>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item command="a">修改密码</el-dropdown-item>
+                    <el-dropdown-item command="c">审核设置</el-dropdown-item>
                     <el-dropdown-item command="b">注销</el-dropdown-item>
                 </el-dropdown-menu>
                 </el-dropdown>
@@ -102,12 +103,23 @@ export default {
         },
         handleCommand(command) {
             // this.$router.push({path: '/passwd'});
-            if (command == 'b') {
-                this.$store.dispatch('UserLogout');
-                this.$router.push({path: '/login'});
-            } else {
-                this.dialog = true;
-            }            
+            switch (command) {
+                case 'a':
+                    this.dialog = true;
+                    break;
+                case 'c':
+                    this.$router.push({path: '/set'});
+                    break;
+                default:
+                    this.$store.dispatch('UserLogout');
+                    this.$router.push({path: '/login'});
+            }
+            // if (command == 'b') {
+            //     this.$store.dispatch('UserLogout');
+            //     this.$router.push({path: '/login'});
+            // } else {
+            //     this.dialog = true;
+            // }         
         },
         handleClose(done) {
             // setTimeout(() => {

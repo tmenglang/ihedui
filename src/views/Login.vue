@@ -60,10 +60,12 @@ export default {
       errorShow: false,
       rules: {
         account: [
-          { required: true, message: "请输入您的帐号", trigger: "blur" },
-          { min: 6, max: 12, message: "长度在 6 到 12 个字符", trigger: "blur" }
+          { required: true, message: "请输入您的帐号", trigger: "blur" }
         ],
-        password: [{ required: true, message: '请输入您的密码', trigger: "blur" }]
+        password: [
+          { required: true, message: '请输入您的密码', trigger: "blur" },
+          { min: 6, max: 12, message: "密码长度在 6 到 12 个字符", trigger: "blur" }
+        ]
       }
     };
   },
