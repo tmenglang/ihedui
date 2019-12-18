@@ -82,8 +82,25 @@ export default {
     return instance.post(url + '/user/probation', data);
   },
 
-  //黑白名单
-  blackWhiteList(data){
-    return instance.post(url + '/user/blackwhitelist', data);
+  //
+  /*
+  data = {userId：token：type: dicts:}
+  */
+  confSetdic(data){
+    return instance.post(url + '/conf/setdic', data);
+  },
+  //
+  /*
+  data = {userId：token：type: dicts:}
+  */
+  confDeldic(data){
+    return instance.post(url + '/conf/deldic', data);
+  },
+  //
+  /*
+  data = {userId：token：type:}
+  */
+  confGetdic(data){
+    return instance.post(url + '/conf/getdic', data);
   }
 }
